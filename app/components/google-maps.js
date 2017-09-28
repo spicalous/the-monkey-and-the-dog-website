@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 const API_URL = 'https://maps.googleapis.com/maps/api/js?key=';
-const KEY = '';
+const KEY = 'AIzaSyDLN-mlvAKcBcen1R7f6UkBE6cJG4s29PQ';
 
 export default Ember.Component.extend({
 

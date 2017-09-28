@@ -1,0 +1,28 @@
+image: node:latest
+
+stages:
+  - build
+  - deploy
+
+before_script:
+  - npm config set spin false
+  - npm install -g bower
+  - npm install -g ember-cli
+  - npm install -g phantomjs-prebuilt
+  - npm install
+  - bower install --allow-root
+
+build:
+  stage: build
+  script:
+    - ember build --prod
+
+pages:
+  stage: deploy
+  script:
+    - ember build --prod -o public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
