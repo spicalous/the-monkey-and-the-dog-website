@@ -17,7 +17,7 @@ build:
 pages:
   stage: deploy
   script:
-    - ember build --prod -o public
+    - ember build --prod
   artifacts:
     paths:
       - public
