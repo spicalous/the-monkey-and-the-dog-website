@@ -17,6 +17,7 @@ build:
 pages:
   stage: deploy
   script:
+    - ember install ember-gitlab-pages
     - ember build --prod -o public
   artifacts:
     paths:
