@@ -10,14 +10,21 @@
 
         <div class="row theme-bg theme-panel mt-3 p-3" id={{category.category}}>
           <div class="col">
-            <h3>{{category.category}}</h3>
+            <h2>{{category.category}}</h2>
             {{#each category.menuItems as |menuItem|}}
-              <div>
-                {{menuItem.menuId}} {{menuItem.name}} {{menuItem.price}}
+              <div class="lead font-weight-bold">
+                {{menuItem.menuId}} {{menuItem.name}} {{#if menuItem.price}}{{menuItem.price}}{{/if}}
               </div>
-              <div>
+              <div class="ml-4 font-weight-light font-italic">
                 {{menuItem.desc}}
               </div>
+              {{#if menuItem.options}}
+                {{#each menuItem.options as |option|}}
+                  <div class="ml-4 font-weight-bold">
+                    {{option.name}} {{option.price}}
+                  </div>
+                {{/each}}
+              {{/if}}
             {{/each}}
           </div>
         </div>
@@ -27,7 +34,9 @@
     <div class="col-sm-3 d-none d-sm-block">
       <div class="mt-3 p-2 theme-secondary-bg theme-panel">
         {{#each model.menu as |category|}}
-          <a href={{concat "#" category.category}}><div class="py-2">{{category.category}}</div></a>
+          <a href={{concat "#" category.category}}>
+            <div class="py-2">{{category.category}}</div>
+          </a>
         {{/each}}
       </div>
     </div>
