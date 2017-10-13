@@ -44,7 +44,7 @@ body > .ember-view {
 }
 
 body {
-  background-image: url("/images/bg-1.jpg");
+  background-image: url("/assets/images/bg-tile.jpg");
   background-repeat: repeat;
   background-size: 70px 70px;
   background-attachment: fixed;
@@ -73,6 +73,13 @@ $theme-secondary-color: #292928;
 
 .spacer {
   height: 150px;
+
+  .fb-like {
+    margin-top: (150px - 44px) / 2;
+    @extend .p-2;
+    @extend .theme-bg;
+    @extend .theme-panel;
+  }
 }
 
 .overflow-y {
