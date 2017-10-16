@@ -266,24 +266,12 @@
           "price": null,
           "options": [
             {
-              "name": "Vegetables and Tofu",
-              "price": 750
-            },
-            {
               "name": "Chicken",
               "price": 790
             },
             {
               "name": "Beef",
               "price": 850
-            },
-            {
-              "name": "Duck",
-              "price": 890
-            },
-            {
-              "name": "Prawn",
-              "price": 950
             }
           ]
         }
@@ -512,7 +500,29 @@
           "menuId": "42",
           "name": "Pad Thai",
           "desc": "Famous Thai style rice noodles with chicken and prawns, egg, bean sprouts, spring onions and ground peanuts",
-          "price": 950
+          "price": null,
+          "options": [
+            {
+              "name": "Vegetables + Tofu",
+              "price": 790
+            },
+            {
+              "name": "Chicken",
+              "price": 850
+            },
+            {
+              "name": "Beef",
+              "price": 850
+            },
+            {
+              "name": "Prawns",
+              "price": 950
+            },
+            {
+              "name": "Chicken + Prawns",
+              "price": 950
+            }
+          ]
         },
         {
           "menuId": "43",
@@ -544,7 +554,29 @@
           "menuId": "45",
           "name": "Khao Pad",
           "desc": "House special fried rice with king prawns and chicken",
-          "price": 950
+          "price": null,
+          "options": [
+            {
+              "name": "Vegetables + Tofu",
+              "price": 790
+            },
+            {
+              "name": "Chicken",
+              "price": 850
+            },
+            {
+              "name": "Beef",
+              "price": 850
+            },
+            {
+              "name": "Prawns",
+              "price": 950
+            },
+            {
+              "name": "Chicken + Prawns",
+              "price": 950
+            }
+          ]
         }
       ]
     }
