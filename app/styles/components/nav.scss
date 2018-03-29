@@ -1,0 +1,42 @@
+$toggler-colour: $palette-blue;
+$toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$toggler-colour}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+
+nav {
+  background-color: $white;
+  box-shadow: 0px 0px 4px 0px;
+
+  .navbar-toggler {
+    color: $toggler-colour;
+    border-color: $toggler-colour;
+
+    .navbar-toggler-icon {
+      background-image: $toggler-icon-bg;
+    }
+  }
+
+  .nav-item {
+    cursor: pointer;
+    color: $palette-blue;
+
+    &.active {
+      color: $white;
+      background-color: $palette-blue;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: lighten($palette-blue, 10);
+    }
+
+    .nav-link {
+      white-space: nowrap;
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+
+  .navbar .nav-item {
+    text-align: center;
+  }
+}

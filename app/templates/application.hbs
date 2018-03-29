@@ -1,21 +1,36 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-light">
-  {{#link-to "index" class="navbar-brand"}}
-    The Monkey and the Dog Eat Thai
-  {{/link-to}}
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggle" aria-controls="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
+<div class="container-fluid bg-palette-blue panel panel-outline">
+  <div class="row align-items-center p-4">
+    <div class="col-12 col-sm-6 text-center">
+      <div>
+        <span class="align-top">THE</span>
+        <h1 class="d-inline-block">MONKEY &</h1>
+      </div>
+      <div>
+        <span class="align-top">THE</span>
+        <h1 class="d-inline-block">DOG</h1>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 text-center" style="color: #E2C599">
+      <h1>EAT THAI</h1>
+    </div>
+  </div>
+</div>
+<nav class="navbar navbar-expand">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-toggle"
+          aria-controls="navbar-toggle" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbar-toggle">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        {{#link-to "index" class="nav-link"}}Home{{/link-to}}
-      </li>
-      <li class="nav-item">
-        {{#link-to "menu" class="nav-link"}}Menu{{/link-to}}
-      </li>
-      <li class="nav-item">
-        {{#link-to "find-us" class="nav-link"}}Find us{{/link-to}}
-      </li>
+    <ul class="navbar-nav justify-content-around w-100" {{action "collapseNav"}}>
+      {{#link-to "index" tagName="li" class="nav-item"}}
+        <a class="nav-link">Home</a>
+      {{/link-to}}
+      {{#link-to "menu" tagName="li" class="nav-item"}}
+        <a class="nav-link">Menu</a>
+      {{/link-to}}
+      {{#link-to "find-us" tagName="li" class="nav-item"}}
+        <a class="nav-link">Find us</a>
+      {{/link-to}}
     </ul>
   </div>
 </nav>
