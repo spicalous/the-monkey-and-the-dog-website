@@ -1,9 +1,10 @@
-import Ember from 'ember';
+import Route from '@ember/routing/route';
+import $ from 'jquery';
 
-export default Ember.Route.extend({
+export default Route.extend({
 
   model() {
-    return Ember.$.getJSON('assets/menu/menu.json');
+    return $.getJSON('assets/menu/menu.json');
   }
 
 });

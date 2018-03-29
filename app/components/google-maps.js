@@ -1,9 +1,10 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import $ from 'jquery';
 
 const API_URL = 'https://maps.googleapis.com/maps/api/js?key=';
 const KEY = 'AIzaSyDLN-mlvAKcBcen1R7f6UkBE6cJG4s29PQ';
 
-export default Ember.Component.extend({
+export default Component.extend({
 
   classNames: ['google-maps', 'p-3', 'theme-bg', 'theme-panel'],
 
@@ -11,7 +12,7 @@ export default Ember.Component.extend({
 
     if (typeof window.google !== 'object' || typeof window.google.maps !== 'object') {
 
-      Ember.$.getScript(API_URL + KEY).done(() => this._initMaps());
+      $.getScript(API_URL + KEY).done(() => this._initMaps());
     } else {
 
       this._initMaps();
