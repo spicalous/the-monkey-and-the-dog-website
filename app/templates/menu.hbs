@@ -1,18 +1,9 @@
-<div class="container-fluid">
-  <div class="row mt-3">
-    <div class="col">
-      <div class="bg-palette-grey panel panel-outline p-4" style="position:relative;z-index:1;">
-        <h1 class="display-3">Menu</h1>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="container h-100">
   <div class="row h-100">
     <div class="col col-sm-9 h-100 overflow-y pb-3">
       {{#each model.menu as |category|}}
 
-        <div class="row bg-palette-gold panel panel-outline mt-4 p-4" id={{category.category}}>
+        <div class="row bg-palette-gold panel panel-outline mt-4" id={{category.category}}>
           <div class="col">
             <h2><u>{{category.category}}</u></h2>
             {{#each category.menuItems as |menuItem|}}
@@ -36,7 +27,7 @@
       {{/each}}
     </div>
     <div class="col-sm-3 d-none d-sm-block">
-      <div class="mt-4 p-4 bg-palette-grey panel panel-outline">
+      <div class="mt-4 bg-palette-grey panel panel-outline">
         {{#each model.menu as |category|}}
           <a href={{concat "#" category.category}} style="color:white;">
             <div class="py-2">{{category.category}}</div>

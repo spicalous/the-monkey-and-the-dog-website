@@ -6,7 +6,7 @@ const KEY = 'AIzaSyDLN-mlvAKcBcen1R7f6UkBE6cJG4s29PQ';
 
 export default Component.extend({
 
-  classNames: ['google-maps', 'p-3', 'theme-bg', 'theme-panel'],
+  classNames: ['google-maps', 'bg-palette-grey', 'panel', 'panel-outline'],
 
   didInsertElement() {
 
