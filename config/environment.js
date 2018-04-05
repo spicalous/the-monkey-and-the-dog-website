@@ -24,6 +24,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.googleAnalyticsId = 'UA-116993780-1';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -44,6 +45,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.googleAnalyticsId = 'UA-116993780-2';
     // here you can enable a production-specific feature
   }
 
