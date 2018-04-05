@@ -1,6 +1,10 @@
-<div class="jumbotron jumbotron-fluid theme-bg">
-  <div class="container">
-    <h1 class="display-3">Menu</h1>
+<div class="container-fluid">
+  <div class="row mt-3">
+    <div class="col">
+      <div class="bg-palette-grey panel panel-outline p-4" style="position:relative;z-index:1;">
+        <h1 class="display-3">Menu</h1>
+      </div>
+    </div>
   </div>
 </div>
 <div class="container h-100">
@@ -8,9 +12,9 @@
     <div class="col col-sm-9 h-100 overflow-y pb-3">
       {{#each model.menu as |category|}}
 
-        <div class="row theme-bg theme-panel mt-3 p-3" id={{category.category}}>
+        <div class="row bg-palette-gold panel panel-outline mt-4 p-4" id={{category.category}}>
           <div class="col">
-            <h2>{{category.category}}</h2>
+            <h2><u>{{category.category}}</u></h2>
             {{#each category.menuItems as |menuItem|}}
               <div class="lead font-weight-bold">
                 {{menuItem.menuId}} {{menuItem.name}} {{#if menuItem.price}}{{menuItem.price}}{{/if}}
@@ -32,9 +36,9 @@
       {{/each}}
     </div>
     <div class="col-sm-3 d-none d-sm-block">
-      <div class="mt-3 p-2 theme-secondary-bg theme-panel">
+      <div class="mt-4 p-4 bg-palette-grey panel panel-outline">
         {{#each model.menu as |category|}}
-          <a href={{concat "#" category.category}}>
+          <a href={{concat "#" category.category}} style="color:white;">
             <div class="py-2">{{category.category}}</div>
           </a>
         {{/each}}
